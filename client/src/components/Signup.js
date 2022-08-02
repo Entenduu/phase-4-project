@@ -5,9 +5,10 @@ function Signup({ onLogin, setUser}) {
     const [password, setPassword] = useState("");
     const [email, setEmail] = useState("");
     const [passwordConfirmation, setPasswordConfirmation] = useState("");
+    const [errors, setErrors] = useState([]);
     const navigate = useNavigate();
 
-    function handleSubmit(e) {
+    async function handleSubmit(e) {
         e.preventDefault();
 
         
@@ -27,7 +28,8 @@ function Signup({ onLogin, setUser}) {
             r.json().then((user) => setUser(user));
             navigate('/')
         } else {
-            alert('passwords do not match')
+            r.json().then((errorData) => setErrors(errorData.errors))
+            alert(errors)
         }
         })
     }
