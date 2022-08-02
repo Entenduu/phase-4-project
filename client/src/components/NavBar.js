@@ -11,22 +11,25 @@ function NavBar({ user, setUser }) {
     }
 
     return (
-        <header>
-        <div>
-            <Link to="/">Home</Link>
-        </div>
-        <div>
-            {user ? (
-            <button onClick={handleLogoutClick}>Logout</button>
-            ) : (
-            <>
-                <Link to="/signup">Signup</Link>
-                <Link to="/login">Login</Link>
-            </>
-            )}
-        </div>
-        </header>
+        <>
+            <nav class='navbar'>
+                <h1>Super Good Project Name</h1>
+                <div class='links'>
+                    <Link to="/">Home</Link>
+                        {user ? (
+                        <button onClick={handleLogoutClick}  id='logout-button'>Logout</button>
+                        ) : (
+                        <>
+                            <Link to="/signup">Signup</Link>
+                            <Link to="/login">Login</Link>  
+                        </>
+                    )}
+                </div>
+            </nav>    
+        </>
     );
 }
+
+
 
 export default NavBar;
