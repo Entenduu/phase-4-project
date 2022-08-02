@@ -29,7 +29,7 @@ function App() {
           <Routes>
             <Route path="/signup" element={<Signup setUser={setUser} />}>
             </Route>
-            <Route path="/login" element={ <Login setUser={setUser} />}>
+            <Route path="/login" element={ <Login setUser={setUser} style={{ backgroundImage: `url(https://as2.ftcdn.net/v2/jpg/03/75/28/61/1000_F_375286189_to6PfpET55cHsuPStLf0V2Nbep6a7wEq.jpg)` }}/>}>
             </Route>
             <Route path="/" element={ <Home />}>
             </Route>
