@@ -1,3 +1,4 @@
+import Adbar from "../AdBar";
 import TopicsBar from "./TopicsBar";
 
 function Home({ user }) {
@@ -5,9 +6,8 @@ function Home({ user }) {
     if (user) {
         return (
             <div>
-                
                 <TopicsBar/>
-            
+                <Adbar/>
             </div>
         )
     } else {

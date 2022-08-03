@@ -113,3 +113,7 @@ input{
   background-color: #C84B31; /* Add a green color to the "active/current" link */
   color: white;
 }
+
+.ads-bar{
+  float:right;
+}
