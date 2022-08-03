@@ -29,8 +29,8 @@ function Login({ setUser }) {
 
     return (
         <>
-        <div class='login-container' >
-            <form onSubmit={handleSubmit} class='login' >
+        <div className='login-container' >
+            <form onSubmit={handleSubmit} className='login' >
                 <h1>Login</h1>
                 <label htmlFor="username"></label>
                 <input

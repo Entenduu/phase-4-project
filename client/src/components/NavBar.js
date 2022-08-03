@@ -12,10 +12,10 @@ function NavBar({ user, setUser }) {
 
     return (
         <>
-            <nav class='navbar'>
+            <nav className='navbar'>
                 <h1>Super Good Project Name</h1>
                 
-                <div class='links'>
+                <div className='links'>
                     <Link to="/">Home</Link>
                         {user ? (
                             <button onClick={handleLogoutClick}  id='logout-button'>Logout</button>

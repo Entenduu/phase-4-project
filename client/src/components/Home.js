@@ -1,16 +1,19 @@
+import TopicsBar from "./TopicsBar";
 
 function Home({ user }) {
 
     if (user) {
         return (
             <div>
-                {user.username}
+                
+                <TopicsBar/>
+            
             </div>
         )
     } else {
         return (
             
-            <div class='background-div'>
+            <div className='background-div'>
                 <h1>Please Login or Sign Up</h1>;
             </div>
             

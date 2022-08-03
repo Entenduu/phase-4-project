@@ -35,10 +35,10 @@ function Signup({ onLogin, setUser}) {
     }
 
     return (
-        <div class='background-div'>
+        <div className='background-div'>
 
             <h1> sign up</h1>
-        <form onSubmit={handleSubmit} class='login'>
+        <form onSubmit={handleSubmit} className='login'>
     
             <label htmlFor="username"></label>
             <input
