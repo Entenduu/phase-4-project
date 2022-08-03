@@ -93,7 +93,7 @@ input{
 
 .vertical-menu {
   width: 200px; 
-  height: auto;
+  height: 500px;
   overflow-y: auto;/* Set a width if you like */
 }
 
@@ -116,4 +116,9 @@ input{
 
 .ads-bar{
   float:right;
+
+}
+
+.ads-bar img{
+  width: 100%;
 }
