@@ -30,30 +30,29 @@ function Login({ setUser }) {
     return (
         <>
         <div class='login-container' >
-            <h1> djisd</h1>
-        <form onSubmit={handleSubmit} class='login' >
-            <h1>Login</h1>
-            <label htmlFor="username"></label>
-            <input
-            placeholder="username"
-            type="text"
-            id="username"
-            autoComplete="off"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            /><br></br>
-            <label htmlFor="password"></label>
-            <input
-            placeholder="password"
-            type="password"
-            id="password"
-            autoComplete="current-password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            />
-            <button type="submit">Login</button>
-            <div style={{color: "red"}}>{errors.map((error) => error)}</div>
-        </form>
+            <form onSubmit={handleSubmit} class='login' >
+                <h1>Login</h1>
+                <label htmlFor="username"></label>
+                <input
+                placeholder="username"
+                type="text"
+                id="username"
+                autoComplete="off"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                /><br></br>
+                <label htmlFor="password"></label>
+                <input
+                placeholder="password"
+                type="password"
+                id="password"
+                autoComplete="current-password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                />
+                <button type="submit">Login</button>
+                <div style={{color: "yellow"}}>{errors.map((error) => error)}</div>
+            </form>
         </div>
         </>
     );

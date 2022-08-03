@@ -14,10 +14,11 @@ function NavBar({ user, setUser }) {
         <>
             <nav class='navbar'>
                 <h1>Super Good Project Name</h1>
+                
                 <div class='links'>
                     <Link to="/">Home</Link>
                         {user ? (
-                        <button onClick={handleLogoutClick}  id='logout-button'>Logout</button>
+                            <button onClick={handleLogoutClick}  id='logout-button'>Logout</button>
                         ) : (
                         <>
                             <Link to="/signup">Signup</Link>

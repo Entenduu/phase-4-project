@@ -2,9 +2,19 @@
 function Home({ user }) {
 
     if (user) {
-        return <h1>Welcome, {user.username}!</h1>;
+        return (
+            <div>
+                {user.username}
+            </div>
+        )
     } else {
-        return <h1>Please Login or Sign Up</h1>;
+        return (
+            
+            <div class='background-div'>
+                <h1>Please Login or Sign Up</h1>;
+            </div>
+            
+        )
     }
 }
 

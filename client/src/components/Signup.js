@@ -35,38 +35,47 @@ function Signup({ onLogin, setUser}) {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
-            <label htmlFor="username">Username:</label>
+        <div class='background-div'>
+
+            <h1> sign up</h1>
+        <form onSubmit={handleSubmit} class='login'>
+    
+            <label htmlFor="username"></label>
             <input
-            type="text"
-            id="username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            />
-            <label htmlFor="email">Email:</label>
+                placeholder="username"
+                type="text"
+                id="username"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+            /><br></br>
+            <label htmlFor="email"></label>
             <input
-            type="text"
-            id="email"
-            autoComplete="off"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            />
-            <label htmlFor="password">Password:</label>
+                placeholder="Email"
+                type="text"
+                id="email"
+                autoComplete="off"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+            /><br></br>
+            <label htmlFor="password"></label>
             <input
+                placeholder="password"
                 type="password"
                 id="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-            />
-            <label htmlFor="password_confirmation">Confirm Password:</label>
+            /><br></br>
+            <label htmlFor="password_confirmation"></label>
             <input
+                placeholder="confirm password"
                 type="password"
                 id="password_confirmation"
                 value={passwordConfirmation}
                 onChange={(e) => setPasswordConfirmation(e.target.value)}
-            />
+            /><br></br>
             <button type="submit">Submit</button>
         </form>
+        </div>
     );
 }
 export default Signup;
