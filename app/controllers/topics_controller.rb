@@ -1,22 +1,27 @@
+# Airbnb Connect Apprenticeship Code Sample
+# Ruby on Rails
+
+# Controller for Topic Model
+
 class TopicsController < ApplicationController
   before_action :set_topic, only: %i[ show update destroy ]
 
-  # GET /topics
+  # GET request function for all topics /topics
   def index
     @topics = Topic.all
 
     render json: @topics
   end
 
-  # GET /topics/1
+  # GET request function for select topic /topics/1
   def show
     render json: @topic
   end
 
-  # POST /topics
+  # POST request function for all topics /topics
   def create
     @topic = Topic.new(topic_params)
-
+  # Error handling statements
     if @topic.save
       render json: @topic, status: :created, location: @topic
     else
@@ -24,7 +29,7 @@ class TopicsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /topics/1
+  # PATCH/PUT function /topics/1
   def update
     if @topic.update(topic_params)
       render json: @topic
@@ -33,7 +38,7 @@ class TopicsController < ApplicationController
     end
   end
 
-  # DELETE /topics/1
+  # DELETE request function for select topic /topics/1
   def destroy
     @topic.destroy
   end
